@@ -1,15 +1,17 @@
 package cruiseShipClassesSolution;
 
 public class Passenger {
-	private String firstName;
-	private String surname;
-	private int Expenses;
+	public static final String EMPTY_CABIN = "EMPTY";
 	
-	public void setFirstName (String n) {
-		firstName = n;
+	private String firstName = EMPTY_CABIN;
+	private String surname = EMPTY_CABIN ;
+	private int expenses = 200;
+	
+	public void setFirstName(String firstName) {
+		this.firstName = firstName.toUpperCase();
 	}
-	public void setSurname (String n ) {
-		surname = n;
+	public void setSurname (String surname) {
+		this.surname = surname.toUpperCase();
 	}
 
 	public String getFristName() {
@@ -17,5 +19,8 @@ public class Passenger {
 	}
 	public String getSurname() {
 		return surname;
+	}
+	public int getExpenses() {
+		return expenses;
 	}
 }
